@@ -30,3 +30,6 @@ ipykernel==6.25.0
 
 # Utilitaires
 tqdm==4.66.1
+
+#Big Query
+google-cloud-bigquery==3.40.1
