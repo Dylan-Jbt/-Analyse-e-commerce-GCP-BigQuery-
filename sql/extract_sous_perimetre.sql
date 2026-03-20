@@ -1,4 +1,3 @@
--- extract_sous_perimetre.sql
 SELECT
     oi.created_at AS order_item_created_at,
     o.created_at AS order_created_at,
