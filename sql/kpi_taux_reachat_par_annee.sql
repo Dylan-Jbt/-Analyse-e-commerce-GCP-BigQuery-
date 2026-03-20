@@ -29,4 +29,13 @@ SELECT
     COUNTIF(nb_commandes >= 2) / COUNT(*) AS taux_reachat
 FROM client_commandes
 GROUP BY year
-ORDER BY year;
+ORDER BY year
+
+
+
+
+
+
+-- SQL resultats : 
+2023 = 0.0
+2024 = 0.043165467625899283

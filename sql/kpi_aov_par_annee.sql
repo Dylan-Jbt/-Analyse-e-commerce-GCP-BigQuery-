@@ -32,4 +32,11 @@ WHERE
     AND DATE(oi.created_at) BETWEEN '2023-01-01' AND '2024-12-31'
 
 GROUP BY year
-ORDER BY year;
+ORDER BY year
+
+
+
+
+-- SQL resultats : 
+2023 = 102.68739731671059
+2024 = 78.2149660538654

@@ -21,3 +21,13 @@ WHERE u.country = 'France'
 
 GROUP BY year
 ORDER BY year
+
+
+
+
+
+
+
+-- SQL resultats: 
+2023 = 0.0998185117967332
+2024 = 0.091836734693877556
