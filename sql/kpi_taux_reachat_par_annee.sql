@@ -1,3 +1,6 @@
+/* Étape 1 : Identifier le nombre de commandes complétées par utilisateur et par an
+dans le sous-périmètre France / Women
+*/
 WITH client_commandes AS (
     SELECT
         u.id AS user_id,
@@ -13,12 +16,17 @@ WITH client_commandes AS (
     WHERE u.country = 'France'
       AND p.department = 'Women'
       AND DATE(oi.created_at) BETWEEN '2023-01-01' AND '2024-12-31'
+      -- On ne compte que les commandes validées (Complete) pour le ré-achat
       AND oi.status = 'Complete'
     GROUP BY user_id, year
 )
+
+/* Étape 2 : Calculer le ratio (Clients >= 2 commandes / Total clients)
+*/
 SELECT
     year,
+    -- Ratio des clients ayant commandé au moins 2 fois
     COUNTIF(nb_commandes >= 2) / COUNT(*) AS taux_reachat
 FROM client_commandes
 GROUP BY year
-ORDER BY year
+ORDER BY year;
