@@ -21,4 +21,4 @@ SELECT
     COUNTIF(nb_commandes >= 2) / COUNT(*) AS taux_reachat
 FROM client_commandes
 GROUP BY year
-ORDER BY year;
+ORDER BY year

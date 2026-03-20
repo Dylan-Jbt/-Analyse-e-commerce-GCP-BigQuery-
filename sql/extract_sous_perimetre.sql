@@ -8,9 +8,9 @@ SELECT
     p.brand,
     p.category,
     p.department,
-    p.product_name,
+    p.name AS product_name,
     o.order_id,
-    oi.order_item_id,
+    oi.id AS order_item_id,
     u.id AS user_id,
     u.gender,
     u.country,
@@ -26,4 +26,4 @@ JOIN `bigquery-public-data.thelook_ecommerce.users` AS u
 WHERE u.country = 'France'
   AND p.department = 'Women'
   AND DATE(oi.created_at) BETWEEN '2023-01-01' AND '2024-12-31'
-ORDER BY oi.created_at, o.order_id, oi.order_item_id;
+ORDER BY oi.created_at, o.order_id, oi.id
