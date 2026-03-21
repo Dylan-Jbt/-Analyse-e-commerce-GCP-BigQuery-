@@ -65,8 +65,8 @@ Ce projet consiste à réaliser une **analyse de performance e-commerce** pour l
 │   ├── kpi_taux_reachat_par_annee.sql  ← Taux de ré-achat par année
 │   └── data_answers_sql/               ← Résulats des reqêtes SQL sur Big Query
 ├── powerbi/
+│   └── Dashboard e-commerce.pbix       ← Dashboard Power BI à partir du dataset reconstitué sur Big Query 
 │   └── Dashboard_thelook_fr.ipynb      ← Visualisations interactives (Plotly)
-│   └── Dashboard Power BI
 └── utils/
     ├── data_prep.py                    ← Fonctions utilitaires (détection outliers)
     └── big_query_utils.py              ← Utilitaires BigQuery
